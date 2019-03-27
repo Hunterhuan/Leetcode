@@ -18,3 +18,4 @@ public:
         flag.clear();
     }
 };
+
