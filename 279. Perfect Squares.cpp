@@ -62,17 +62,20 @@ public:
 class Solution {
 public:
     int numSquares(int n) {
+        // 直接开方的是1
         int temp=sqrt(n);
         if(temp*temp==n){
             return 1;
         }
+        // 满足公式的就是4个的
         temp=n;
-        while(temp%4==0){
-            temp/=4;
+        while(temp&3==0){
+            temp>>=2;
         }
-        if(temp%8==7){
+        if(temp&7==7){
             return 4;
         }
+        // 然后遍历找出答案为2的
         for(int i=1;i*i<n;i++){
             temp=n-i*i;
             int a=sqrt(temp);
@@ -80,6 +83,7 @@ public:
                 return 2;
             }
         }
+        // 最后的就是答案为3的
         return 3;
     }
 };
