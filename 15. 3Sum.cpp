@@ -34,9 +34,12 @@ public:
         vector<vector<int>> res;
         if(nums.size()<3)
             return res;
+        // 定第一个数字
         for(int i=0;i< nums.size();++i){
+            //重复就删去
             if((i>0) && (nums[i]==nums[i-1]))
                 continue;
+            // 用two point方法去search 另外两个
             int left=i+1, right = nums.size()-1;
             while(left < right){
                 int sum = nums[i] + nums[left] + nums[right];
