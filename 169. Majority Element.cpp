@@ -16,7 +16,7 @@ public:
                 elem = num[i];
                 count = 1;
             }
-            else    {
+            else{
                 if(elem == num[i])
                     count++;
                 else
