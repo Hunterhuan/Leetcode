@@ -1,4 +1,9 @@
 // 哭了。竟然是这么做
+// 从左边遍历找到最大的。
+// 从右边遍历找到最小的。
+// 然后对每个遍历，如果max<=min 的时候，就++
+// 原理：如果此时max<=min，就说明这个可以作为一个分界，
+// 前面和后面的sort之后都是有序的
 class Solution {
 public:
     int maxChunksToSorted(vector<int>& arr) {
