@@ -43,14 +43,12 @@ public:
             vector<int>sum(n,0);
             for(int r=l;r<m;r++)
             {
-                
                 for(int i=0;i<n;i++)
-                {
                     sum[i]+=matrix[i][r];
-                }
-                set<int>s;
+                set<int> s;
                 s.insert(0);
                 int cur_sum=0;
+                // 复杂度的优化主要在这一步，利用set search比较快的特点。
                 for(auto &row : sum){
                     cur_sum+=row;
                     auto it=s.lower_bound(cur_sum-k);
