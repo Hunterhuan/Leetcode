@@ -43,7 +43,7 @@ public:
 };
 
 
-\\第二种方法。别人的分治法。不断的把矩阵缩小
+// 第二种方法。别人的分治法。不断的把矩阵缩小
 class Solution {
 public:
     bool searchMatrix(vector<vector<int> >& matrix, int target) {

@@ -36,7 +36,7 @@ public:
 
 //另外一种是分治法，每次合并两个，最终合并在一起
 // 每次对折数组，合并对应的，直到所有的都在lists[0]
-// 这个效率高得多
+// 这个效率高得多，想法很棒
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {

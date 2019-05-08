@@ -1,4 +1,4 @@
-// 
+// 很简单
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
