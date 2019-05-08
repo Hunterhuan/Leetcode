@@ -45,19 +45,24 @@ public:
 double findkth(vector<int>::iterator a,int m,
                vector<int>::iterator b,int n,
                int k)
-{
+{   
+    // 确保a是最短的那个array
     if(m >  n)
         return findkth(b,n,a,m,k);
+    // a中已经什么都没有了，所以就是b中的第k个数
     if(m == 0)
         return b[k-1];
+    // 如果k=1，那么就是a、b中的最小值
     if(k == 1)
         return min(*a,*b);
-
+    // 在a中占pa个，b中占pb个
     int pa = min(k/2,m),pb = k - pa;
+    // 如果a小于，那么就把pa个先排除，再找第k-pa 大的数字
     if(*(a + pa - 1) < *(b + pb -1))
         return findkth(a+pa,m-pa,b,n,k-pa);
     else if(*(a + pa -1) > *(b + pb -1))
         return findkth(a,m,b+pb,n-pb,k-pb);
+    // 如果相等，则说明找好找到分界情况，就可以return了。
     else
         return *(a+pa-1);
 }
