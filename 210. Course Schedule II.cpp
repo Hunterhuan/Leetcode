@@ -45,3 +45,4 @@ private:
         return degrees;
     }
 };
+
