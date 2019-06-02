@@ -129,7 +129,7 @@ void merge(vector<int>& A, int start, int mid, int end)
             A[k] = R[j++];
     }
 }
-
+// 2LL 是 longlongint 的2 
 int mergesort_and_count(vector<int>& A, int start, int end)
 {
     if (start < end) {
