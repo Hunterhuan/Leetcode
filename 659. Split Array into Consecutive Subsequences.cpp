@@ -3,10 +3,13 @@ class Solution {
 public:
     bool isPossible(vector<int>& nums){
         unordered_map<int,int> cnt, tails;
+        // 统计词频
         for(int &i : nums) cnt[i]++;
         for(int &i : nums){
+            // 说明已经用过了
             if(!cnt[i]) continue;
             cnt[i]--;
+            // 
             if(tails[i-1] > 0){
                 tails[i-1]--;
                 tails[i]++;
