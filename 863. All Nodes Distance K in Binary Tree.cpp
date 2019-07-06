@@ -1,6 +1,6 @@
 // solution1: dfs 
-很巧妙的一个方法，作者思路真的很强。
-在代码中写注释。
+// 很巧妙的一个方法，作者思路真的很强。
+// 在代码中写注释。
 class Solution {
 public:
     
@@ -35,7 +35,7 @@ public:
             if (d == k) {
                 ret.push_back(root->val);
             } else {
-                如果d小于k，就说明可以向上追溯，那就从另外一个子节点中向下追溯找到距离为k-d-1的节点
+                // 如果d小于k，就说明可以向上追溯，那就从另外一个子节点中向下追溯找到距离为k-d-1的节点
                 getDown(root->right,   k-d-1, ret);
             }
             return d + 1;
